@@ -1,0 +1,14 @@
+{
+  "name": "neighbourhood-computer-store",
+  "version": "1.1.0",
+  "private": true,
+  "description": "Local computer store storefront and order request backend",
+  "scripts": {
+    "start": "node server.js",
+    "check": "node --check server.js && node --check app.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
