@@ -1,11 +1,13 @@
-# [SHOP NAME] — Neighbourhood Computer Store
+# SK Computers — Laptops, PCs & Accessories
 
-A responsive storefront for a local computer shop, with a small zero-dependency Node.js backend that receives and saves order requests and service bookings. No online payment: the shop phones the customer to confirm.
+A responsive storefront for SK Computers, with a small zero-dependency Node.js backend that receives and saves order requests and service bookings. No online payment is taken: the shop confirms orders directly.
 
 ## Features
 
 **Storefront (vanilla HTML/CSS/JS)**
-- 13 products across 9 categories, with search, category filter, price sort, compare (up to 3), wishlist and cart
+- 17 example products across 9 categories, with search, category filter, price sort, compare (up to 3), wishlist and cart
+- Responsive product, category, gaming, customer-feedback, newsletter and shop-information sections
+- Product ratings and customer reviews are visibly marked as samples; replace them with verified feedback before launch
 - Cart and wishlist live in the browser (`localStorage`) and are validated on load
 - Prices in ₹, Indian phone format, shop hours, mobile-first layout (down to 380px)
 - Keyboard-friendly dialogs: focus moves into a dialog, stays trapped inside it, and returns when it closes
@@ -42,16 +44,16 @@ Search the whole project for these placeholders and replace them (in VS Code: `C
 
 | Placeholder | Where |
 |---|---|
-| `[SHOP NAME]` | `index.html`, `app.js`, `privacy.html` |
-| `[SHOP ADDRESS]`, `[CITY]` | footer, JSON-LD block in `<head>`, `privacy.html` |
-| `+91 00000 00000` / `tel:` links | footer, JSON-LD, `privacy.html` |
-| `[SHOP EMAIL]`, `[DATE]`, `[RETENTION PERIOD]` | `privacy.html` |
+| `[SHOP PHONE]`, `[SHOP EMAIL]`, `[DATE]`, `[RETENTION PERIOD]` | `privacy.html` |
+| Store address and opening hours | `index.html`, `privacy.html` |
+| Instagram and Facebook profile URLs | social links in the `index.html` footer |
 
 Also check by hand:
 - Replace the Unsplash stock photos with your own product photos.
 - Only keep claims in the page that are true for your shop (e.g. "genuine products", "authorised brands", "inclusive of taxes").
+- Replace the clearly labelled sample reviews and ratings with verified customer feedback.
 - Have the privacy notice reviewed; it is a template, not legal advice.
-- Real customer reviews can be added later; none are shown now on purpose.
+- Newsletter submission currently validates the email and explains that a mailing-list service must be connected before updates can be sent.
 
 ## Changing products or prices
 
@@ -69,6 +71,15 @@ To add a product, add an object to `products` in `app.js` and its id and price t
   description: "Customer-facing description"
 }
 ```
+
+### Customising the storefront
+
+- **Colours:** edit the CSS custom properties in the `:root` rule near the top of `styles.css`. The main theme uses `--blue`, `--blue-dark`, `--navy`, `--purple`, `--ink`, `--canvas` and `--shadow`.
+- **Products:** edit the `products` array near the top of `app.js`. Keep every product `id` unique, and add or update its price in `PRODUCT_PRICES` in `server.js`.
+- **Images:** replace a product's `image` URL in `app.js` and update its `alt` text. Use an image you have permission to use.
+- **Shop name:** update the title, logo text and footer in `index.html`, the custom-built product maker in `app.js`, the structured data in `index.html`, and the privacy notice in `privacy.html`.
+- **Contact details:** replace the contact and retention placeholders in `privacy.html`; add the shop's real social profile URLs in the footer of `index.html`.
+- **Newsletter:** connect the form in `index.html` to a mailing-list service before using it to collect subscribers. The current form is a front-end validation demo and does not store or send addresses.
 
 ## Data and privacy
 

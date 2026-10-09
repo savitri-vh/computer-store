@@ -4,14 +4,18 @@
   {id:"gaming-15",name:"Nitro V 15 — Ready when you are",category:"Gaming",maker:"Acer",price:74990,oldPrice:79990,badge:"GAMING FAVOURITE",badgeStyle:"tag-orange",image:"https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=82",alt:"Powerful laptop for gaming and creative work",specs:["Intel Core i5","16 GB RAM","RTX 4050"],details:{Processor:"Intel Core i5-13420H",Memory:"16 GB DDR5",Storage:"512 GB NVMe SSD",Display:'15.6" FHD 144 Hz',Graphics:"NVIDIA GeForce RTX 4050 6 GB",Warranty:"1 year manufacturer warranty"},description:"A well-balanced gaming laptop with plenty of graphics punch for your games and creative projects."},
   {id:"studio-monitor",name:"ViewFinity 24 — A clearer view",category:"Monitor",maker:"Samsung",price:12990,oldPrice:null,badge:"DESK UPGRADE",badgeStyle:"tag-yellow",image:"https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=700&q=82",alt:"Minimal computer monitor on a clean desk",specs:['24" Full HD',"IPS panel","Eye comfort"],details:{Display:'24" Full HD IPS',Resolution:"1920 × 1080",Refresh:"75 Hz",Connectivity:"HDMI, DisplayPort",Features:"Eye Saver Mode, flicker-free",Warranty:"3 year manufacturer warranty"},description:"An easy-on-the-eyes, crisp Full HD monitor for homework, home offices, and second screens."},
   {id:"mechanical-keyboard",name:"Keychron C3 Pro — Type your way",category:"Accessories",maker:"Keychron",price:5990,oldPrice:null,badge:"A NICE LITTLE EXTRA",badgeStyle:"tag-blue",image:"https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=700&q=82",alt:"Mechanical keyboard ready for a tidy desktop",specs:["Mechanical keys","TKL layout","USB-C"],details:{Switches:"Red mechanical switches",Layout:"87-key TKL",Connectivity:"Wired USB-C",Lighting:"White backlight",Compatibility:"Windows, macOS, Linux",Warranty:"1 year shop support"},description:"A satisfying mechanical keyboard that keeps your desk tidy and your typing comfortable."},
-  {id:"custom-desktop",name:"Everyday desktop — Room to grow",category:"Desktop",maker:"[SHOP NAME]",price:34990,oldPrice:null,badge:"BUILT FOR YOU",badgeStyle:"",image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=700&q=82",alt:"Custom desktop PC with a clear side panel",specs:["Intel Core i3","8 GB RAM","512 GB SSD"],details:{Processor:"Intel Core i3-12100",Memory:"8 GB DDR4",Storage:"512 GB NVMe SSD",Graphics:"Intel UHD 730",OperatingSystem:"Available with or without Windows",Warranty:"1 year local shop support"},description:"A thoughtfully assembled desktop for home, studies, and the everyday office. Ask us about upgrades."},
+  {id:"custom-desktop",name:"Everyday desktop — Room to grow",category:"Desktop",maker:"SK Computers",price:34990,oldPrice:null,badge:"BUILT FOR YOU",badgeStyle:"",image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=700&q=82",alt:"Custom desktop PC with a clear side panel",specs:["Intel Core i3","8 GB RAM","512 GB SSD"],details:{Processor:"Intel Core i3-12100",Memory:"8 GB DDR4",Storage:"512 GB NVMe SSD",Graphics:"Intel UHD 730",OperatingSystem:"Available with or without Windows",Warranty:"1 year local shop support"},description:"A thoughtfully assembled desktop for home, studies, and the everyday office. Ask us about upgrades."},
   {id:"wireless-mouse",name:"Pebble Mouse 2 — Small but mighty",category:"Accessories",maker:"Logitech",price:2495,oldPrice:null,badge:"EVERYDAY PICK",badgeStyle:"tag-yellow",image:"https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=700&q=82",alt:"Wireless mouse on a clean desk",specs:["Bluetooth","Silent clicks","Up to 24 months"],details:{Connectivity:"Bluetooth Low Energy",Buttons:"3 quiet-click buttons",Battery:"Up to 24 months",Compatibility:"Windows, macOS, ChromeOS, iPadOS",Warranty:"1 year manufacturer warranty"},description:"A comfortable, quiet wireless mouse for your laptop bag, desk, or work-from-home setup."},
   {id:"portable-ssd",name:"T7 Shield — Keep your files close",category:"Storage",maker:"Samsung",price:8999,oldPrice:null,badge:"BACK UP & GO",badgeStyle:"tag-blue",image:"https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=700&q=82",alt:"Compact portable storage device for backing up files",specs:["1 TB storage","USB 3.2","Rugged design"],details:{Capacity:"1 TB",Interface:"USB 3.2 Gen 2",Speed:"Up to 1,050 MB/s read",Protection:"IP65 water & dust resistance",Compatibility:"Windows, macOS, Android",Warranty:"3 year manufacturer warranty"},description:"Fast, pocket-sized backup storage for photos, work files, and everything you'd rather not lose."},
   {id:"wireless-headphones",name:"Tune 720BT — Find your focus",category:"Accessories",maker:"JBL",price:4999,oldPrice:null,badge:"STUDY ESSENTIAL",badgeStyle:"tag-blue",image:"https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=700&q=82",alt:"Comfortable over-ear wireless headphones",specs:["Wireless Bluetooth","Up to 76 hours","Foldable design"],details:{Connectivity:"Bluetooth 5.3",Battery:"Up to 76 hours",Charging:"USB-C fast charge",Microphone:"Built-in hands-free calls",Design:"Foldable, lightweight",Warranty:"1 year manufacturer warranty"},description:"Comfortable wireless headphones with long battery life for study sessions, calls, and commutes."},
   {id:"home-printer",name:"EcoTank L3210 — Print more, worry less",category:"Printer",maker:"Epson",price:13990,oldPrice:null,badge:"HOME & STUDY",badgeStyle:"tag-orange",image:"https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?auto=format&fit=crop&w=700&q=82",alt:"All-in-one ink tank printer for home and small offices",specs:["Print, scan, copy","Refillable ink tank","USB connection"],details:{Functions:"Print, scan, copy",Technology:"Ink tank, colour inkjet",Connectivity:"USB 2.0",Paper:"A4, A5, A6, envelopes",Use:"Home, student, small office",Warranty:"1 year manufacturer warranty"},description:"An economical all-in-one printer for school projects, forms, and everyday home-office essentials."},
   {id:"wifi-router",name:"Archer AX23 — Better Wi-Fi, room to room",category:"Networking",maker:"TP-Link",price:5990,oldPrice:null,badge:"STAY CONNECTED",badgeStyle:"tag-green",image:"https://images.unsplash.com/photo-1606904825846-647eb07f5be2?auto=format&fit=crop&w=700&q=82",alt:"Home Wi-Fi router for a stable connected household",specs:["Wi-Fi 6","Dual-band","Easy setup"],details:{Standard:"Wi-Fi 6 (802.11ax)",Speed:"Up to 1.8 Gbps combined",Bands:"Dual-band, 2.4 GHz + 5 GHz",Ports:"4 × Gigabit LAN, 1 × Gigabit WAN",Security:"WPA3, parental controls",Warranty:"3 year manufacturer warranty"},description:"A straightforward Wi-Fi 6 upgrade for smoother streaming, work calls, and connected homes."},
   {id:"laptop-ssd",name:"Crucial P3 Plus — A speedier start",category:"Storage",maker:"Crucial",price:6499,oldPrice:null,badge:"PC UPGRADE",badgeStyle:"tag-blue",image:"https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=700&q=82",alt:"Solid state drive for upgrading a computer",specs:["1 TB capacity","NVMe Gen 4","Easy upgrade"],details:{Capacity:"1 TB",Interface:"M.2 NVMe PCIe Gen 4",Speed:"Up to 5,000 MB/s read",FormFactor:"M.2 2280",Compatibility:"Compatible desktops and laptops",Warranty:"5 year limited manufacturer warranty"},description:"A roomy, speedy NVMe drive for extra storage or a fresh upgrade. Bring your laptop in and we'll check compatibility."},
-  {id:"desktop-memory",name:"Crucial 16 GB — Give your PC some room",category:"Memory",maker:"Crucial",price:3299,oldPrice:null,badge:"PC UPGRADE",badgeStyle:"tag-green",image:"https://images.unsplash.com/photo-1562976540-1502c49b5f4a?auto=format&fit=crop&w=700&q=82",alt:"Desktop memory module for a computer upgrade",specs:["16 GB capacity","DDR4 3200 MHz","Desktop memory"],details:{Capacity:"16 GB",Type:"DDR4 UDIMM",Speed:"3200 MHz",Compatibility:"Compatible desktop motherboards",Use:"Multitasking and system upgrades",Warranty:"Limited manufacturer warranty"},description:"A straightforward memory upgrade for compatible desktops. Bring your PC or model details and we'll check the right fit."}
+  {id:"desktop-memory",name:"Crucial 16 GB — Give your PC some room",category:"Memory",maker:"Crucial",price:3299,oldPrice:null,badge:"PC UPGRADE",badgeStyle:"tag-green",image:"https://images.unsplash.com/photo-1562976540-1502c49b5f4a?auto=format&fit=crop&w=700&q=82",alt:"Desktop memory module for a computer upgrade",specs:["16 GB capacity","DDR4 3200 MHz","Desktop memory"],details:{Capacity:"16 GB",Type:"DDR4 UDIMM",Speed:"3200 MHz",Compatibility:"Compatible desktop motherboards",Use:"Multitasking and system upgrades",Warranty:"Limited manufacturer warranty"},description:"A straightforward memory upgrade for compatible desktops. Bring your PC or model details and we'll check the right fit."},
+  {id:"hp-pavilion-15",name:"Pavilion 15 — Ready for your next project",category:"Laptop",maker:"HP",price:56990,oldPrice:59990,badge:"WORK & STUDY",badgeStyle:"tag-blue",image:"https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=700&q=82",alt:"HP laptop for productivity and everyday use",specs:["Intel Core i5","16 GB RAM","512 GB SSD"],details:{Processor:"Intel Core i5",Memory:"16 GB RAM",Storage:"512 GB SSD",Display:'15.6" Full HD',Warranty:"Check current manufacturer coverage"},description:"A versatile everyday laptop for documents, browsing, video calls and study. Confirm the current model and specification with the shop."},
+  {id:"dell-inspiron-desktop",name:"Inspiron Desktop — A dependable home base",category:"Desktop",maker:"Dell",price:52990,oldPrice:null,badge:"HOME & OFFICE",badgeStyle:"tag-blue",image:"https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=700&q=82",alt:"Desktop computer setup for home and office work",specs:["Intel Core i5","16 GB RAM","512 GB SSD"],details:{Processor:"Intel Core i5",Memory:"16 GB RAM",Storage:"512 GB SSD",Graphics:"Integrated graphics",Warranty:"Check current manufacturer coverage"},description:"A compact desktop example for office tasks, home admin and everyday browsing. Ask the shop to confirm the available configuration."},
+  {id:"asus-rog-desktop",name:"ROG Strix G — Built for game night",category:"Gaming",maker:"ASUS",price:124990,oldPrice:null,badge:"GAMING DESKTOP",badgeStyle:"tag-orange",image:"https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=700&q=82",alt:"Gaming desktop computer with a performance-focused setup",specs:["Intel Core i7","16 GB RAM","GeForce RTX"],details:{Processor:"Intel Core i7",Memory:"16 GB RAM",Storage:"1 TB SSD",Graphics:"NVIDIA GeForce RTX series",Warranty:"Check current manufacturer coverage"},description:"A gaming desktop example for high-refresh play and creative workloads. Confirm the exact GPU, configuration and stock with the shop."},
+  {id:"macbook-air-13",name:"MacBook Air 13 — Light, quiet, capable",category:"Laptop",maker:"Apple",price:99900,oldPrice:null,badge:"LIGHT & PORTABLE",badgeStyle:"tag-purple",image:"https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=700&q=82",alt:"Apple MacBook laptop on a desk",specs:["Apple silicon","8 GB unified memory","256 GB SSD"],details:{Processor:"Apple silicon",Memory:"8 GB unified memory",Storage:"256 GB SSD",Display:'13.6" Liquid Retina',Warranty:"Check current manufacturer coverage"},description:"A lightweight Mac notebook example for mobile work and study. Confirm the current generation, configuration and availability before ordering."}
 ];
 
 const currency = new Intl.NumberFormat("en-IN", {style:"currency",currency:"INR",maximumFractionDigits:0});
@@ -75,6 +79,7 @@ function addToCart(id) {
   }
   if (existing) existing.quantity += 1; else cart.push({id, quantity:1});
   updateCart();
+  bumpCart();
   showToast(`${product.name} added to your cart.`);
   return true;
 }
@@ -93,9 +98,10 @@ function productCard(product) {
     </div>
     <div class="product-info"><span class="product-category">${product.maker} · ${product.category}</span>
       <h3>${product.name}</h3>
+      <div class="product-rating" aria-label="Sample rating, 4.8 out of 5"><span aria-hidden="true">★★★★★</span><small>4.8 <em>sample</em></small></div>
       <div class="product-specs">${product.specs.map(spec => `<span>${spec}</span>`).join("")}</div>
       <div class="product-buy"><span class="product-price">${currency.format(product.price)}${product.oldPrice ? `<small><s>${currency.format(product.oldPrice)}</s></small>` : ""}</span>
-      <button class="add-cart-btn" data-add="${product.id}" aria-label="Add ${product.name} to cart">+</button></div>
+      <div class="product-actions-row"><button class="details-btn" data-view="${product.id}">View details</button><button class="add-cart-btn" data-add="${product.id}">Add to cart</button></div></div>
     </div></article>`;
 }
 
@@ -304,6 +310,10 @@ document.querySelectorAll("[data-category-link]").forEach(link => link.addEventL
   document.querySelector("#main-nav").classList.remove("nav-open");
   document.querySelector("#menu-toggle").setAttribute("aria-expanded", "false");
 }));
+document.querySelectorAll("#main-nav a").forEach(link => link.addEventListener("click", () => {
+  document.querySelector("#main-nav").classList.remove("nav-open");
+  document.querySelector("#menu-toggle").setAttribute("aria-expanded", "false");
+}));
 
 document.querySelector("#search-input").addEventListener("input", event => {
   searchTerm = event.target.value.trim();
@@ -460,9 +470,44 @@ document.querySelector("#booking-form").addEventListener("submit", async event =
   }
 });
 
+document.querySelector("#newsletter-form").addEventListener("submit", event => {
+  event.preventDefault();
+  const form = event.currentTarget;
+  if (!form.reportValidity()) return;
+  document.querySelector("#newsletter-status").textContent =
+    "Thanks! Email validation works in this preview. Connect a mailing-list service to send updates.";
+  form.reset();
+});
+
 document.querySelector("#current-year").textContent = new Date().getFullYear();
 document.querySelector(".tab-count").textContent = products.length;
 cartDrawer.inert = true;
 updateCart();
 updateWishlist();
 renderProducts();
+// Fade sections in as they scroll into view
+const revealTargets = document.querySelectorAll(
+  ".benefit-strip, .category-section, .products-section, .help-section, .about-section, .services-section, .gaming-section, .testimonials-section, .newsletter-section, .booking-section"
+);
+if ("IntersectionObserver" in window) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target); // animate once only
+      }
+    });
+  }, { threshold: 0.12 });
+  revealTargets.forEach((section) => {
+    section.classList.add("reveal");
+    observer.observe(section);
+  });
+}
+
+// Bounce the cart badge
+function bumpCart() {
+  const badge = document.querySelector("#cart-count");
+  badge.classList.remove("bump");
+  void badge.offsetWidth; // forces the browser to restart the animation
+  badge.classList.add("bump");
+}

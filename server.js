@@ -27,7 +27,11 @@ const PRODUCT_PRICES = new Map([
   ["home-printer", 13990],
   ["wifi-router", 5990],
   ["laptop-ssd", 6499],
-  ["desktop-memory", 3299]
+  ["desktop-memory", 3299],
+  ["hp-pavilion-15", 56990],
+  ["dell-inspiron-desktop", 52990],
+  ["asus-rog-desktop", 124990],
+  ["macbook-air-13", 99900]
 ]);
 const SERVICES = new Set([
   "Laptop / PC repair",
