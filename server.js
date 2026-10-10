@@ -49,7 +49,9 @@ const STATIC_FILES = new Map([
   ["/privacy.html", ["privacy.html", "text/html; charset=utf-8"]],
   ["/styles.css", ["styles.css", "text/css; charset=utf-8"]],
   ["/app.js", ["app.js", "text/javascript; charset=utf-8"]],
-  ["/favicon.svg", ["favicon.svg", "image/svg+xml"]]
+  ["/favicon.svg", ["favicon.svg", "image/svg+xml"]],
+  ["/favicon.png", ["favicon.png", "image/png"]],
+  ["/logo-mark.png", ["logo-mark.png", "image/png"]]
 ]);
 const CONTENT_SECURITY_POLICY = "default-src 'self' https://images.unsplash.com https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' https://images.unsplash.com data:; font-src 'self' https://fonts.gstatic.com; connect-src 'self'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'";
 

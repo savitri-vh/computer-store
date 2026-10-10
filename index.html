@@ -9,13 +9,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.png" type="image/png">
+  <link rel="alternate icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/favicon.png">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="en_IN">
   <meta property="og:title" content="SK Computers — Laptops, PCs & Accessories">
   <meta property="og:description" content="Explore laptops, desktops, gaming PCs and accessories with friendly local advice from SK Computers.">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ComputerStore","name":"SK Computers","address":{"@type":"PostalAddress","streetAddress":"College Road","addressLocality":"Belagavi","addressCountry":"IN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"17:00"}]}
+  {"@context":"https://schema.org","@type":"ComputerStore","name":"SK Computers","telephone":"+91 97422 50035","email":"skcomputers035@gmail.com","foundingDate":"2018","address":{"@type":"PostalAddress","streetAddress":"College Road","addressLocality":"Belagavi","addressRegion":"Karnataka","addressCountry":"IN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"10:00","closes":"20:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Sunday","opens":"11:00","closes":"17:00"}]}
   </script>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
@@ -26,8 +28,8 @@
     <div class="header-main page-width">
       <button class="icon-button mobile-menu-button" id="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span class="menu-lines"></span></button>
       <a class="brand" href="#" aria-label="SK Computers home">
-        <span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="5.5" y="5.5" width="21" height="16" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M3.5 25.5h25l-2-3H5.5l-2 3Z" fill="currentColor"/><path d="m13 13 2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-        <span class="brand-name">SK Computers<small>COMPUTERS & MORE</small></span>
+        <span class="brand-mark"><img src="/logo-mark.png" alt="" class="brand-logo-img"></span>
+        <span class="brand-name">SK Computers<small>SALES · SERVICE · IT SOLUTIONS</small></span>
       </a>
       <form class="search-form" id="search-form" role="search">
         <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -35,6 +37,7 @@
         <kbd>⌘ K</kbd>
       </form>
       <div class="header-actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" role="switch" aria-checked="false" aria-label="Switch to dark theme"><span class="toggle-knob">☀</span></button>
         <button class="header-action mobile-search-button" id="mobile-search-button" aria-label="Search products"><span class="action-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8" stroke="currentColor" stroke-width="1.8"/><path d="m16 16 4.2 4.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span></button>
         <button class="header-action wishlist-action" id="wishlist-button" aria-label="View wishlist"><span class="action-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.3 8.7c0 5-8.3 10-8.3 10s-8.3-5-8.3-10a4.1 4.1 0 0 1 7.5-2.2l.8 1.1.8-1.1a4.1 4.1 0 0 1 7.5 2.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></span><span>Wishlist</span><i class="count-badge" id="wishlist-count">0</i></button>
         <button class="header-action" id="cart-button" aria-label="Open cart"><span class="action-icon"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3.5 4h2l2.2 11.1a2 2 0 0 0 2 1.6h7.8a2 2 0 0 0 2-1.6L21 8H6.3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/><circle cx="10" cy="20" r="1" fill="currentColor"/><circle cx="18" cy="20" r="1" fill="currentColor"/></svg></span><span>Cart</span><i class="count-badge" id="cart-count">0</i></button>
@@ -55,10 +58,23 @@
         <h1>Power Your World<br>With Better <span>Technology.</span></h1>
         <p>Explore laptops, desktops and accessories built for work, gaming, creativity and everyday life.</p>
         <div class="hero-actions"><a class="button button-primary" href="#products" data-category-link="Laptop">Shop Laptops <span>→</span></a><a class="button button-outline" href="#deals">Explore Deals <span>↗</span></a><a class="help-choice-link" href="#booking" data-service="Help me choose a laptop">Need help choosing? Talk to us ↗</a></div>
-        <div class="hero-proof"><div class="avatar-stack"><span>R</span><span>A</span><span>S</span><span>+</span></div><div><strong>Real people. Real help.</strong><small>Your local tech team is right around the corner.</small></div></div>
+        <div class="hero-proof"><div class="avatar-stack"><span>R</span><span>A</span><span>S</span><span>+</span></div><div><strong>Trusted since 2018.</strong><small>Led by Muttappa Badiger — 13 years in the field.</small></div></div>
       </div>
       <div class="hero-visual">
-        <div class="hero-image-wrap"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1100&q=85" alt="Modern laptop ready for work or study"></div>
+        <div class="hero-image-wrap">
+          <div class="hero-slider" id="hero-slider">
+            <img class="active" src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=1100&q=85" alt="Modern laptop ready for work or study">
+            <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?auto=format&fit=crop&w=1100&q=85" alt="Gaming desktop computer with a performance-focused setup">
+            <img src="https://images.unsplash.com/photo-1587202372775-e229f172b9d7?auto=format&fit=crop&w=1100&q=85" alt="Custom desktop PC with a clear side panel">
+            <img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=1100&q=85" alt="Minimal computer monitor on a clean desk">
+            <div class="hero-slider-dots" role="tablist" aria-label="Hero image selector">
+              <button type="button" class="active" aria-label="Show image 1" aria-selected="true"></button>
+              <button type="button" aria-label="Show image 2" aria-selected="false"></button>
+              <button type="button" aria-label="Show image 3" aria-selected="false"></button>
+              <button type="button" aria-label="Show image 4" aria-selected="false"></button>
+            </div>
+          </div>
+        </div>
         <div class="hero-image-shade"></div>
         <div class="hero-label"><span class="label-icon">✳</span><div><strong>A better tech experience</strong><small>Chosen with you, not for you.</small></div></div>
         <div class="hero-float-card"><span>✦</span><div><strong>Need a little help?</strong><small>We love a good tech question.</small></div><a href="#contact" aria-label="Contact our team">↗</a></div>
@@ -120,6 +136,27 @@
       </div>
     </section>
 
+    <section class="clients-section section-padding" id="clients">
+      <div class="page-width">
+        <div class="section-heading"><div><span class="section-kicker">WHO WE'VE WORKED WITH</span><h2>Trusted by local institutions.</h2><p>From neighbourhood banks to government offices, our bulk orders and IT support cover organisations across Belagavi and beyond.</p></div></div>
+        <ul class="client-pills">
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Union Bank</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Saraswat Bank</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Local banks in Belagavi & regional offices</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Vega Aviation</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Vega Hi-Tech</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>R. N. Shetty College</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Government of Karnataka / KPTCL</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Government Social Welfare Department</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Kendriya Vidyalaya, Macche</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Malaprabha Industries</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Kanaka Shree Gas Agency, M.K. Hubli</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Govt JRCS Office</li>
+          <li class="client-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8.3 6.3 11.5 13 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>Govt DR Office</li>
+        </ul>
+      </div>
+    </section>
+
     <section class="services-section section-padding" id="services">
       <div class="page-width"><div class="section-heading"><div><span class="section-kicker">WHEN TECH NEEDS A HAND</span><h2>A local fix. A little peace of mind.</h2><p>Tell us what's going on. We'll tell you honestly what we can do.</p></div><a href="#booking" class="text-link">Book a service <span>→</span></a></div>
         <div class="service-grid">
@@ -168,9 +205,9 @@
     <div class="page-width">
       <div class="footer-main">
         <div class="footer-about">
-          <a class="brand brand-footer" href="#home" aria-label="SK Computers home"><span class="brand-mark"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect x="5.5" y="5.5" width="21" height="16" rx="2.5" stroke="currentColor" stroke-width="2"/><path d="M3.5 25.5h25l-2-3H5.5l-2 3Z" fill="currentColor"/><path d="m13 13 2 2 4-4" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="brand-name">SK Computers<small>COMPUTERS & MORE</small></span></a>
+          <a class="brand brand-footer" href="#home" aria-label="SK Computers home"><span class="brand-mark"><img src="/logo-mark.png" alt="" class="brand-logo-img"></span><span class="brand-name">SK Computers<small>SALES · SERVICE · IT SOLUTIONS</small></span></a>
           <p>Your local shop for good computers, honest advice, and a helping hand when you need one.</p>
-          <span class="footer-local"><span></span> Proudly local. Always human.</span>
+          <span class="footer-local"><span></span> Trusted since 2018. Proudly local.</span>
           <div class="social-links" aria-label="Social media">
             <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" aria-label="Instagram (replace with the shop profile)">ig</a>
             <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" aria-label="Facebook (replace with the shop profile)">f</a>
@@ -178,7 +215,7 @@
         </div>
         <div class="footer-column"><h3>Products</h3><a href="#products" data-category-link="Laptop">Laptops & notebooks</a><a href="#products" data-category-link="Desktop">Desktop computers</a><a href="#products" data-category-link="Gaming">Gaming gear</a><a href="#products" data-category-link="Accessories">Accessories & essentials</a><a href="#deals">Shop offers</a></div>
         <div class="footer-column"><h3>Customer support</h3><a href="#about">About SK Computers</a><a href="#services">Repairs & service</a><a href="#services">RAM & SSD upgrades</a><a href="#booking">Book a service</a><a href="/privacy.html">Privacy notice</a></div>
-        <div class="footer-column footer-visit"><h3>Contact</h3><p><span>⌖</span> College Road<br><span class="address-indent">Belagavi, India</span></p><a href="#booking"><span>⌕</span> Contact the shop</a><p><span>◷</span> Mon–Sat: 10:00 AM – 8:00 PM<br><span class="address-indent">Sunday: 11:00 AM – 5:00 PM</span></p><a class="directions-link" href="https://www.google.com/maps/search/?api=1&query=SK+Computers+Belagavi" target="_blank" rel="noreferrer">Get directions <span>↗</span></a></div>
+        <div class="footer-column footer-visit"><h3>Contact</h3><p><span>⌖</span> College Road<br><span class="address-indent">Belagavi, Karnataka</span></p><a href="tel:+919742250035"><span>☎</span> +91 97422 50035</a><a href="mailto:skcomputers035@gmail.com"><span>✉</span> skcomputers035@gmail.com</a><p><span>◷</span> Mon–Sat: 10:00 AM – 8:00 PM<br><span class="address-indent">Sunday: 11:00 AM – 5:00 PM</span></p><a class="directions-link" href="https://www.google.com/maps/search/?api=1&query=SK+Computers+Belagavi" target="_blank" rel="noreferrer">Get directions <span>↗</span></a></div>
       </div>
       <div class="footer-bottom"><span>© <span id="current-year"></span> SK Computers. Made for the neighbourhood.</span><div><a href="/privacy.html">Privacy</a></div><span>Prices in INR · Confirm current availability in store.</span></div>
     </div>

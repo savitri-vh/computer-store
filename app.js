@@ -1,4 +1,4 @@
- const products = [
+const products = [
   {id:"everyday-14",name:"Aspire 14 — Ready for everyday",category:"Laptop",maker:"Acer",price:42990,oldPrice:46990,badge:"GOOD FOR STUDY",badgeStyle:"tag-blue",image:"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=700&q=82",alt:"Slim silver laptop for everyday study and work",specs:["Intel Core i5","16 GB RAM","512 GB SSD"],details:{Processor:"Intel Core i5-1235U",Memory:"16 GB DDR4",Storage:"512 GB NVMe SSD",Display:'14" Full HD IPS',Graphics:"Intel Iris Xe",Warranty:"1 year manufacturer warranty"},description:"A dependable, easy-to-carry laptop for class notes, video calls, spreadsheets, and everything in between."},
   {id:"ideapad-slim",name:"IdeaPad Slim 3 — More room to think",category:"Laptop",maker:"Lenovo",price:38990,oldPrice:null,badge:"EVERYDAY PICK",badgeStyle:"",image:"https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=700&q=82",alt:"Open laptop on a desk, ready for work",specs:["AMD Ryzen 5","8 GB RAM","512 GB SSD"],details:{Processor:"AMD Ryzen 5 7520U",Memory:"8 GB LPDDR5",Storage:"512 GB NVMe SSD",Display:'15.6" Full HD',Graphics:"AMD Radeon 610M",Warranty:"1 year manufacturer warranty"},description:"An excellent day-to-day companion with a roomy screen, quick storage, and a budget that's kind."},
   {id:"gaming-15",name:"Nitro V 15 — Ready when you are",category:"Gaming",maker:"Acer",price:74990,oldPrice:79990,badge:"GAMING FAVOURITE",badgeStyle:"tag-orange",image:"https://images.unsplash.com/photo-1593642632823-8f785ba67e45?auto=format&fit=crop&w=700&q=82",alt:"Powerful laptop for gaming and creative work",specs:["Intel Core i5","16 GB RAM","RTX 4050"],details:{Processor:"Intel Core i5-13420H",Memory:"16 GB DDR5",Storage:"512 GB NVMe SSD",Display:'15.6" FHD 144 Hz',Graphics:"NVIDIA GeForce RTX 4050 6 GB",Warranty:"1 year manufacturer warranty"},description:"A well-balanced gaming laptop with plenty of graphics punch for your games and creative projects."},
@@ -60,6 +60,20 @@ const toast = document.querySelector("#toast");
 function save(key, value) {
   try { localStorage.setItem(key, JSON.stringify(value)); return true; }
   catch (error) { console.warn(`Could not save ${key} to local storage.`, error); showToast("Your changes couldn't be saved on this device."); return false; }
+}
+
+// Retriggerable CSS-animation helper: removes the class, forces reflow, re-adds it,
+// then cleans up once the animation ends (so toggled styles like .added don't stick).
+function playBounce(element, className) {
+  if (!element) return;
+  element.classList.remove(className);
+  void element.offsetWidth; // restart the animation even if it's already playing
+  element.classList.add(className);
+  element.addEventListener("animationend", function onEnd(event) {
+    if (event.target !== element) return;
+    element.classList.remove(className);
+    element.removeEventListener("animationend", onEnd);
+  });
 }
 
 function showToast(message) {
@@ -233,6 +247,7 @@ productGrid.addEventListener("click", event => {
   const add = event.target.closest("[data-add]");
   if (add) {
     addToCart(add.dataset.add);
+    playBounce(add, "added");
     return;
   }
   const wish = event.target.closest("[data-wishlist]");
@@ -240,6 +255,7 @@ productGrid.addEventListener("click", event => {
     const id = wish.dataset.wishlist;
     wishlist = wishlist.includes(id) ? wishlist.filter(item => item !== id) : [...wishlist, id];
     updateWishlist();
+    playBounce(productGrid.querySelector(`[data-wishlist="${id}"]`), "pop");
     if (wishlistOnly) renderProducts();
     showToast(wishlist.includes(id) ? "Added to your wishlist." : "Removed from your wishlist.");
     return;
@@ -252,7 +268,8 @@ productGrid.addEventListener("click", event => {
 productModal.addEventListener("click", event => {
   const add = event.target.closest("[data-add]");
   if (!add) return;
-  if (addToCart(add.dataset.add)) closePanels();
+  playBounce(add, "added");
+  if (addToCart(add.dataset.add)) setTimeout(closePanels, 260);
 });
 
 productGrid.addEventListener("keydown", event => {
@@ -272,6 +289,7 @@ productGrid.addEventListener("change", event => {
     return;
   }
   compare = checkbox.checked ? [...compare, id] : compare.filter(item => item !== id);
+  playBounce(checkbox.closest(".compare-check"), "bounce");
   updateCompare();
 });
 
@@ -293,6 +311,7 @@ document.querySelector(".filter-tabs").addEventListener("click", event => {
   activeFilter = tab.dataset.filter;
   wishlistOnly = false;
   renderProducts();
+  playBounce(tab, "bounce");
 });
 
 document.querySelector("#sort-select").addEventListener("change", renderProducts);
@@ -479,6 +498,54 @@ document.querySelector("#newsletter-form").addEventListener("submit", event => {
   form.reset();
 });
 
+// Theme toggle: dark/light, persisted, respects the OS preference on first visit
+const themeToggle = document.querySelector("#theme-toggle");
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  themeToggle.setAttribute("aria-checked", String(theme === "dark"));
+  themeToggle.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} theme`);
+  themeToggle.querySelector(".toggle-knob").textContent = theme === "dark" ? "☾" : "☀";
+}
+const savedTheme = (() => {
+  try { return localStorage.getItem("neighbourhood-theme"); }
+  catch { return null; }
+})();
+applyTheme(savedTheme === "dark" || savedTheme === "light" ? savedTheme : (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+themeToggle.addEventListener("click", () => {
+  const next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+  applyTheme(next);
+  try { localStorage.setItem("neighbourhood-theme", next); } catch (error) { console.warn("Could not save theme preference.", error); }
+});
+
+// Hero image slider: auto-rotates, with dots for manual control
+const heroSlider = document.querySelector("#hero-slider");
+if (heroSlider) {
+  const slides = [...heroSlider.querySelectorAll("img")];
+  const dots = [...heroSlider.querySelectorAll(".hero-slider-dots button")];
+  let activeSlide = 0;
+  let slideTimer;
+  function goToSlide(index) {
+    slides[activeSlide].classList.remove("active");
+    dots[activeSlide].classList.remove("active");
+    dots[activeSlide].setAttribute("aria-selected", "false");
+    activeSlide = (index + slides.length) % slides.length;
+    slides[activeSlide].classList.add("active");
+    dots[activeSlide].classList.add("active");
+    dots[activeSlide].setAttribute("aria-selected", "true");
+  }
+  function startAutoSlide() {
+    clearInterval(slideTimer);
+    slideTimer = setInterval(() => goToSlide(activeSlide + 1), 5000);
+  }
+  dots.forEach((dot, index) => dot.addEventListener("click", () => {
+    goToSlide(index);
+    startAutoSlide();
+  }));
+  heroSlider.addEventListener("mouseenter", () => clearInterval(slideTimer));
+  heroSlider.addEventListener("mouseleave", startAutoSlide);
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) startAutoSlide();
+}
+
 document.querySelector("#current-year").textContent = new Date().getFullYear();
 document.querySelector(".tab-count").textContent = products.length;
 cartDrawer.inert = true;
@@ -487,7 +554,7 @@ updateWishlist();
 renderProducts();
 // Fade sections in as they scroll into view
 const revealTargets = document.querySelectorAll(
-  ".benefit-strip, .category-section, .products-section, .help-section, .about-section, .services-section, .gaming-section, .testimonials-section, .newsletter-section, .booking-section"
+  ".benefit-strip, .category-section, .products-section, .help-section, .about-section, .clients-section, .services-section, .gaming-section, .testimonials-section, .newsletter-section, .booking-section"
 );
 if ("IntersectionObserver" in window) {
   const observer = new IntersectionObserver((entries) => {

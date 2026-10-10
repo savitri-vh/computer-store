@@ -40,13 +40,13 @@ Requires Node.js 18+. Stop with `Ctrl+C`.
 
 ## Before you launch
 
-Search the whole project for these placeholders and replace them (in VS Code: `Ctrl+Shift+F`):
+The real logo (`logo-mark.png`, `favicon.png`), phone (+91 97422 50035), email (skcomputers035@gmail.com) and "Established 2018 / Muttappa Badiger" credit are already filled in, pulled from the shop's one-page profile. Still check by hand:
 
-| Placeholder | Where |
+| Item | Where |
 |---|---|
-| `[SHOP PHONE]`, `[SHOP EMAIL]`, `[DATE]`, `[RETENTION PERIOD]` | `privacy.html` |
 | Store address and opening hours | `index.html`, `privacy.html` |
 | Instagram and Facebook profile URLs | social links in the `index.html` footer |
+| Esteemed-clients list | `.clients-section` in `index.html` — update if the client roster changes |
 
 Also check by hand:
 - Replace the Unsplash stock photos with your own product photos.
@@ -78,6 +78,7 @@ To add a product, add an object to `products` in `app.js` and its id and price t
 - **Products:** edit the `products` array near the top of `app.js`. Keep every product `id` unique, and add or update its price in `PRODUCT_PRICES` in `server.js`.
 - **Images:** replace a product's `image` URL in `app.js` and update its `alt` text. Use an image you have permission to use.
 - **Shop name:** update the title, logo text and footer in `index.html`, the custom-built product maker in `app.js`, the structured data in `index.html`, and the privacy notice in `privacy.html`.
+- **Logo:** replace `logo-mark.png` (header/footer) and `favicon.png` (browser tab) with a new image of the same aspect ratio, and add it to `STATIC_FILES` in `server.js` if you rename the file.
 - **Contact details:** replace the contact and retention placeholders in `privacy.html`; add the shop's real social profile URLs in the footer of `index.html`.
 - **Newsletter:** connect the form in `index.html` to a mailing-list service before using it to collect subscribers. The current form is a front-end validation demo and does not store or send addresses.
 
